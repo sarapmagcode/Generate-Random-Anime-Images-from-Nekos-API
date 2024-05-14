@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    padding-top: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus {
+    outline: 1px solid cadetblue;
+}
+
+button {
+    padding: 13px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: darkblue;
+}
+
+button:focus {
+    outline: none;
+}
+
+.container {
+    height: auto;
+    width: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.container div {
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.animated-bg {
+    background-image: linear-gradient(
+        to right,
+        #f6f7f8 0%,
+        #edeef1 10%,
+        #f6f7f8 20%,
+        #f6f7f8 100%
+    );
+    background-size: 200% 100%;
+    animation: bgPos 1s linear infinite;
+}
+
+.container div > img {
+    width: inherit;
+    border-radius: inherit;
+    height: inherit;
+}
+
+@keyframes bgPos {
+    0% {
+        background-position: 50% 0;
+    }
+
+    100% {
+        background-position: -150% 0;
+    }
+}
